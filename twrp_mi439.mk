@@ -24,14 +24,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 $(call inherit-product, device/xiaomi/mi439/device.mk)
 
 # Inherit common product files.
-$(call inherit-product-if-exists, vendor/omni/config/common.mk)
-$(call inherit-product-if-exists, vendor/pb/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := mi439
-PRODUCT_NAME := omni_mi439
+PRODUCT_NAME := twrp_mi439
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := SDM439
 TARGET_VENDOR := Xiaomi
